@@ -5,7 +5,7 @@ import { UilSignOutAlt } from "@iconscout/react-unicons";
 import { SidebarData } from "../../AdminData/data";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../actions/AuthActions";
-import { UilEstate } from "@iconscout/react-unicons";
+import { UilEstate ,UilUsersAlt,UilChat} from "@iconscout/react-unicons";
 import { Link, NavLink } from "react-router-dom";
 const Sidebar = () => {
   const [selected, setSelected] = useState(0);
@@ -44,7 +44,7 @@ const Sidebar = () => {
           key={1}
           onClick={() => setSelected(1)}
         >
-          <div><UilEstate /></div>
+          <div><UilUsersAlt /></div>
           <Link to="/admin/user" style={{textDecoration: 'none',color:"black"}}>
           <span>Users</span>
           </Link>
@@ -56,9 +56,9 @@ const Sidebar = () => {
           key={2}
           onClick={() => setSelected(2)}
         >
-          <div><UilEstate /></div>
+          <div><UilChat /></div>
           <Link to="/admin/post" style={{textDecoration: 'none',color:"black"}}>
-          <span>Posts</span>
+          <span>Reported Posts</span>
           </Link>
         </div>
 
@@ -68,7 +68,9 @@ const Sidebar = () => {
           onClick={() => setSelected(3)}
         >
           <div><UilEstate /></div>
-          <span>Analytic</span>
+          <Link to="/admin/posts" style={{textDecoration: 'none',color:"black"}}>
+          <span>Posts</span>
+          </Link>
         </div>
 
         <div className="menuItem">

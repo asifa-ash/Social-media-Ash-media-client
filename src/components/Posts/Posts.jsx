@@ -15,7 +15,7 @@ const Posts = ({ isMyPosts }) => {
   let { posts, loading } = useSelector((state) => state.postReducer);
   const [persons, setPersons] = useState([]);
 
-  posts = posts.reverse();
+  posts = posts?.reverse();
 
   console.log(posts, "postdatadaaaaaaaaa");
   useEffect(() => {
@@ -58,6 +58,7 @@ const Posts = ({ isMyPosts }) => {
         : posts.map((post, id) => {
           let profileUrl;
               persons.forEach((el) => {
+                
                 if (el._id === post.userId) profileUrl = el.profilePicture;
               });
             return <Post data={post} key={id} profileUrl={profileUrl} />;

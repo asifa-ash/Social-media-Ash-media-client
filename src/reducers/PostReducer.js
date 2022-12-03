@@ -1,5 +1,11 @@
 const postReducer = (
-  state = { posts: null, loading: false, error: false, uploading: false },
+  state = {
+    posts: null,
+    loading: false,
+    error: false,
+    uploading: false,
+    comment: null,
+  },
   action
 ) => {
   switch (action.type) {
@@ -34,8 +40,16 @@ const postReducer = (
         loading: false,
         error: false,
       };
-    // case "savePost_SUCCESS":
-    //   return { ...state, loading: false, error: true };
+
+    case "comment_SUCCESS":
+      console.log(action.data,state,"hhhhhhhhhhhhhhhhhhhhhhhhh")
+      return {
+        ...state,
+        comment: action.data.Comment,
+        loading: false,
+        error: false,
+      };
+
     default:
       return state;
   }

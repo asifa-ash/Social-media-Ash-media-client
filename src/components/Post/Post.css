@@ -27,15 +27,65 @@
 }
 .detail{
     display: flex;
+    /* flex-direction: column; */
     font-weight: normal;
     font-size: 10px;
+   
 }
 .dpname{
     margin:15px;
 }
-.desc{
+
+.dot{
     display: flex;
-    justify-content: start;
-    align-items: flex-start;
+    align-self: flex-end;
+
+}
+.dotlist{
+    cursor: pointer;
+    list-style-type: none;  
+    color: brown;
+    
+}
+
+
+
+.chat-sender {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    height: 3.5rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    border-radius: .5rem;
+    align-self: end;
+    
+}
+
+.chat-sender>div:nth-of-type(1)
+{
+    background: rgb(233, 233, 233);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    width: 250px;
+    
+}
+.show-msg{
+    background: linear-gradient(98.63deg, #4daeef 0%, #6921de 100%);
+  color: white;
+  padding: 0.7rem;
+  margin: 10px;
+  border-radius: 1rem 1rem 1rem 0;
+  max-width: 28rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
 
 }

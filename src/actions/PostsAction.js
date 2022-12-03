@@ -38,3 +38,18 @@ export const deletePost = (id,userId) => async (dispatch) => {
   }
 };
 
+
+
+export const getComment = (id) => async (dispatch) => {
+  
+  dispatch({ type: "comment_START" });
+  try {
+    const { data } = await PostsApi.getComment(id);
+    console.log(data,"asssssssss")
+    dispatch({ type: "comment_SUCCESS", data:data} );
+  } catch (error) {
+    console.log(error);
+    dispatch({ type: "comment_FAIL" });
+  }
+};
+

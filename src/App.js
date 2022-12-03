@@ -8,6 +8,7 @@ import Chat from "./pages/Chat/Chat";
 import Admin from "./pages/Admin/Admin";
 import UserManagement from "./pages/UserManagement/UserManagement";
 import PostManager from "./pages/PostManager/Postmanager";
+import PostsManager from "./pages/PostsManger/PostsManager";
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
   if (user) {
    
     admin = user.user.isAdmin
-    console.log(Admin,"gjgghhghvhgvhvhjb")
+    console.log(admin,"gjgghhghvhgvhvhjb")
     // admin=false
   }
 
@@ -50,6 +51,8 @@ function App() {
         <Route path="/user" element={user ? <UserManagement /> : <Navigate to="../auth" />}/>
         <Route path="/post" element={user ? <PostManager /> : <Navigate to="../auth" />}/>
         <Route path="/admin/post" element={user ? <PostManager /> : <Navigate to="../auth" />}/>
+        <Route path="/posts" element={user ? <PostsManager /> : <Navigate to="../auth" />}/>
+        <Route path="/admin/posts" element={user ? <PostsManager /> : <Navigate to="../auth" />}/>
       </Routes>
     </div>
   );

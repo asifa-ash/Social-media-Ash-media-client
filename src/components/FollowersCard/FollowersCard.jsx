@@ -33,6 +33,8 @@ const FollowersCard = ({ location }) => {
       <FollowersModal
         modalOpened={modalOpened}
         setModalOpened={setModalOpened}
+        size="100%"
+        
       />
     </div>
   );
