@@ -32,7 +32,7 @@ const InfoCard = () => {
         console.log(profileUser)
       }
     };
-    fetchProfileUser();
+    ProfileUser();
   }, [user]);
 
   return (
