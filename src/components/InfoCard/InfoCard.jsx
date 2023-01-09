@@ -22,7 +22,7 @@ const InfoCard = () => {
 
 
   useEffect(() => {
-    const fetchProfileUser = async () => {
+    const ProfileUser = async () => {
       if (profileUserId === user._id) {
         setProfileUser(user);
       } else {
