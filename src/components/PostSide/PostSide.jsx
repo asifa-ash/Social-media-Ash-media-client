@@ -8,6 +8,8 @@ const PostSide = ({isMyPosts}) => {
     <div className="PostSide">
       <PostShare/>
       <Posts isMyPosts={isMyPosts}/>
+      
+
     </div>
   );
 };

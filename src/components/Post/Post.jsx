@@ -88,6 +88,8 @@ const Post = ({ data, profileUrl }) => {
 
   return (
     <div className="Post">
+  
+
       <Modal
         overlayColor={
           theme.colorScheme === "dark"
@@ -167,6 +169,10 @@ const Post = ({ data, profileUrl }) => {
           )}
         </div>
       </Modal>
+      {/* 3 dots.............. */}
+      <div className="dot">
+        <MoreVertOutlinedIcon onClick={() => handleModal()} />
+      </div>
       <div className="dp">
         <img
           src={publicFolder + (profileUrl ? profileUrl : "defaultProfile.png")}
@@ -177,15 +183,13 @@ const Post = ({ data, profileUrl }) => {
         </div>
       </div>
       <span>{format(data.createdAt)}</span>
-      <div className="dot">
-        <MoreVertOutlinedIcon onClick={() => handleModal()} />
-      </div>
+      
 
       <img
         src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""}
         alt=""
       />
-
+      
       <div className="postReact">
         <img
           src={liked ? Heart : NotLike}
